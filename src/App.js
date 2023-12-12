@@ -20,7 +20,7 @@ function App() {
   }
 
   function handleComplete(id) {
-    console.log("tamamlama fonksiyonunu buraya yazın")
+    setTasks([...tasks, tasks.map((t) => t.id === id ? t.status = "yapıldı" : null)])
   }
 
   return (
